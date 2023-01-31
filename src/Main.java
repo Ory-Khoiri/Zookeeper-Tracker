@@ -1,37 +1,21 @@
+import java.util.Scanner;
+
 public class Main {
-
+// if class inside class --> should be static
+    final static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
-        camel();
-    }
 
+        System.out.println("Please enter the number of the habitat you would like to view:");
+        int habitatNumber = scanner.nextInt();
 
-    static void camel(){
-        String camel = """
-            Switching on the camera in the camel habitat...
-             ___.-''''-.
-            /___  @    |
-            ',,,,.     |         _.'''''''._
-                 '     |        /           \\
-                 |     \\    _.-'             \\
-                 |      '.-'                  '-.
-                 |                               ',
-                 |                                '',
-                  ',,-,                           ':;
-                       ',,| ;,,                 ,' ;;
-                          ! ; !'',,,',',,,,'!  ;   ;:
-                         : ;  ! !       ! ! ;  ;   :;
-                         ; ;   ! !      ! !  ; ;   ;,
-                        ; ;    ! !     ! !   ; ;
-                        ; ;    ! !    ! !     ; ;
-                       ;,,      !,!   !,!     ;,;
-                       /_I      L_I   L_I     /_I
-            Look at that! Our little camel is sunbathing!""";
+        zoo zoo_tour = new zoo(habitatNumber);
+        zoo_tour.select_habitat();
 
-        System.out.println(camel);
-
-
+        System.out.println("---");
+        System.out.println("You've reached the end of the program. To check another habitat, please restart the watcher.");
 
     }
+
 
 
 }
